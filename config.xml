@@ -159,7 +159,7 @@
     </gap:plugin>
 
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" ></activity>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="false"></activity>
     </edit-config>
 
     <!-- See MOBILE-892 -->
