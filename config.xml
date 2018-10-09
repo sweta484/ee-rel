@@ -159,7 +159,7 @@
     </gap:plugin>
 
    
-        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
+       <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='NUS Excutive Education']" mode="merge">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
     </edit-config>
 
