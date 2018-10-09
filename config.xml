@@ -9,11 +9,11 @@
     <name>NUS Excutive Education</name>
 
     <description>
-      NUS Excutive Education official app
+        NUS Excutive Education official app
     </description>
 
     <author href="http://ee-learning.nus.edu.sg" email="bizswet@nus.edu.sg">
-        NUS Excutive Education team
+        BIZ IT team
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
@@ -141,7 +141,7 @@
     <gap:plugin name="cordova-clipboard" source="npm" />
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
     <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle">
-        <param name="SENDER_ID" value="348998422584" />
+        <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" >
         <param name="URL_SCHEME" value="moodlemobile" />
@@ -158,11 +158,9 @@
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </gap:plugin>
 
-    <!-- @todo: Android debuggable. -->
-        
-        <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="false" />
-    </gap:config-file>
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
+    </edit-config>
 
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
